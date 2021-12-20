@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bharathimyakstest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bharathimyakstest
+  template:
+    metadata:
+      labels:
+        app: bharathimyakstest 
+    spec:
+      containers:
+        - name: bharathimyakstest 
+          image: mycontainerregistery1588.azurecr.io/bharathimyakstest
+          ports:
+          - containerPort: 8080
